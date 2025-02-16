@@ -4,6 +4,17 @@
 requires = ["setuptools", "wheel", "setuptools-git-versioning"]
 build-backend = "setuptools.build_meta"
 
+[project]
+name = <PROJECT NAME GOES HERE>
+description = <PROJECT DESCRIPTION GOES HERE>
+readme = "README.md"
+requires-python = ">=3.8"
+dynamic = ["version", "dependencies"]
+
+[tool.setuptools.packages.find]
+include = ["<PROJECT NAME GOES HERE>*"]
+exclude = ["tests*"]
+
 [tool.setuptools-git-versioning]
 enabled = true
 
@@ -15,13 +26,6 @@ dev_template = "{tag}.post{ccount}"
 
 # Used if untracked files exist or uncommitted changes have been made.
 dirty_template = "{tag}.post{ccount}+dirty"
-
-[project]
-name = <PROJECT NAME GOES HERE>
-description = <PROJECT DESCRIPTION GOES HERE>
-readme = "README.md"
-requires-python = ">=3.8"
-dynamic = ["version", "dependencies"]
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
