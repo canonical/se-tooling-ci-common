@@ -6,5 +6,5 @@ flake8-import-order==0.18.2
 stestr
 pylint==3.1.0
 rpdb
-yamllint==1.35.1
+yamllint==1.37.0
 coverage
